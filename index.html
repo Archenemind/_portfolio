@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Garcia Portfolio</title>
+</head>
+
+<body>
+  <main>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-p">
+          <p>Carlos Garcia</p>
+        </div>
+        <div class="navbar-ul">
+          <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact me</a> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="spacer"></div>
+    <!-- <hr class="navbar-main-hr"> -->
+    <div class="container">
+      <section class="about">
+        <h1>About</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae beatae magni placeat, deserunt quibusdam nihil
+          facere aut illo dicta laudantium fugiat, delectus modi quidem, quia asperiores eaque ipsa Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Ex esse sed ad laudantium, laborum quo eum aliquam natus sapiente, est
+          quaerat ullam, minima assumenda cumque? Nam nostrum deserunt et quisquam?Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Neque esse ab sequi. Quibusdam, id impedit! Ex fuga at dolore quam? Dolor,
+          nostrum soluta? Voluptas nulla ad maiores laudantium cupiditate Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Placeat, tenetur minus quo ex praesentium provident unde perspiciatis dignissimos!
+          Voluptatibus unde esse molestias officiis aliquam asperiores repellat nam, voluptatum quasi omnis! Lorem ipsum
+          dolor sit amet consectetur, adipisicing elit. Doloremque culpa labore reiciendis quidem voluptatibus ut omnis
+          ducimus quos aliquid. Saepe tenetur accusantium vel voluptas iusto non cupiditate quia exercitationem optio.
+      </section>
+      <hr class="about-and-sidebar-divider">
+      <section class="sidebar">
+        <h2>Social Media</h2>
+        <hr>
+        <ul>
+          <li><a href="https://github.com/Archenemind"><img src="Icons/9023659_github_logo_fill_icon.png"
+                alt="Github icon">
+              <p>Github</p>
+            </a></li>
+
+          <li><a href="https://x.com/DannyA83897945"><img src="Icons/104501_twitter_bird_icon.png" alt="X icon">
+              <p>Twitter</p>
+            </a></li>
+
+          <li><a href="https://www.linkedin.com/in/carlos-daniel-garcia-alvarez-846819235/"><img
+                src="Icons/367593_linkedin_business_network_social_icon.png" alt="LinkedIn icon">
+              <p>LinkedIn</p>
+            </a></li>
+
+          <li><a href="mailto:qesloqpongo@gmail.com"><img src="Icons/4691507_gmail_icon.png" alt="Gmail icon">
+              <p>Gmail</p>
+            </a>
+          </li>
+
+        </ul>
+        <h2>Products</h2>
+        <hr>
+      </section>
+    </div>
+    <div class="img-container">
+      <img src="Equal dimentions/IMG_20250425_164345equal_dimentions_640.jpg" alt="Photo of me">
+    </div>
+  </main>
+  <button onclick="stopRefresh()">Stop Auto Refresh</button>
+
+  <script>
+    let refreshInterval;
+
+    // Start refresh automatically when page loads
+    window.onload = function () {
+      refreshInterval = setInterval(function () {
+        location.reload();
+      }, 5000);
+    }
+
+    // Function to stop refreshing
+    function stopRefresh() {
+      clearInterval(refreshInterval);
+    }
+  </script>
+</body>
+
+
+</html>

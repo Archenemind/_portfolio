@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+    background-color: antiquewhite;
+}
+
+hr,
+h2 {
+    margin: 0;
+}
+
+.navbar {
+    /* box-sizing: border-box; */
+    position: fixed;
+    z-index: 1000;
+
+    height: 65px;
+    width: 100%;
+
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: antiquewhite;
+    /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+.navbar-container {
+    box-sizing: border-box;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    font-size: 1.2rem;
+}
+
+.navbar-p {
+    margin-left: 5.5rem;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.navbar-ul {
+    position: sticky;
+    left: 60%;
+
+    display: flex;
+
+    margin-right: 3rem;
+    height: 100%;
+    align-items: center;
+
+    list-style-type: none;
+
+}
+
+.navbar-ul li {
+    position: relative;
+
+    display: inline-block;
+    margin-left: 3rem;
+
+    color: rgb(74, 64, 64);
+}
+
+.navbar-ul li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    /* starts with 0 width */
+    height: 2px;
+    /* same as your previous border width */
+    left: 0;
+    bottom: 0;
+    background-color: rgb(176, 172, 172);
+
+    transition: width 0.3s ease;
+}
+
+.navbar-ul li:hover::after {
+    width: 100%;
+    /* expands to full width on hover */
+}
+
+/* .navbar-ul li:hover {
+    border-bottom: 2px solid;
+} */
+
+.navbar-ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.spacer {
+    height: 65px;
+}
+
+.container {
+    display: flex;
+    margin: 0 5.5rem;
+    border: rem;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* padding: 0 3em; */
+}
+
+.container .about {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 700px;
+    margin: 0 3rem 0 0;
+}
+
+.container .about p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.container .about h1 {
+    margin: 3rem 0 0.25rem 0;
+    font-size: 5rem;
+}
+
+.about-and-sidebar-divider {
+    margin: 4.5rem 0 0 0;
+}
+
+.sidebar {
+    margin: 3rem 0 0 3rem;
+}
+
+.image-container {
+    position: relative;
+
+    flex: 1;
+    /* margin-right: 3em; */
+    /* margin-left: auto; */
+    width: 50%;
+    margin: 3rem 3rem 0 0;
+
+}
+
+.container .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    /* align-items: center; */
+}
+
+.container .sidebar ul li {
+    display: flex;
+    list-style-type: none;
+    margin-top: 0.1rem;
+    top: auto;
+    bottom: auto;
+}
+
+.container .sidebar ul li img {
+    width: 40px;
+    height: 40px;
+}
+
+.container .sidebar ul li a:link {
+    display: flex;
+    top: auto;
+    bottom: auto;
+    text-decoration: none;
+    color: inherit;
+}
+
+.container .sidebar ul li a p {
+    display: inline;
+    margin: auto 0 auto 1rem;
+}
+
+.container .sidebar ul li a:hover {
+    font-weight: bolder;
+}
+
+.container .sidebar hr {
+    margin: 0 5rem 0 0;
+    border-width: 2px;
+    /* height: 2px; */
+}
+
+.img-container img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    /* align-self: center; */
+    padding: 0;
+    border-radius: 50%;
+}
