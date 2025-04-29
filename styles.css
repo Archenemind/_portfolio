@@ -1,3 +1,10 @@
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: aliceblue;
+    }
+} */
+
 body {
     margin: 0;
 
@@ -97,6 +104,7 @@ h2 {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 5.5rem;
     border: rem;
     /* align-items: center; */
@@ -161,6 +169,14 @@ h2 {
     height: 40px;
 }
 
+.container .sidebar ul li a {
+    display: flex;
+    top: auto;
+    bottom: auto;
+    text-decoration: none;
+    color: inherit;
+}
+
 .container .sidebar ul li a:link {
     display: flex;
     top: auto;
@@ -184,6 +200,10 @@ h2 {
     /* height: 2px; */
 }
 
+.my-projects-ul img {
+    border-radius: 50%;
+}
+
 .img-container img {
     width: 50%;
     height: 50%;
@@ -193,4 +213,16 @@ h2 {
     /* align-self: center; */
     padding: 0;
     border-radius: 50%;
+}
+
+.container .two {
+    display: flex;
+}
+
+.about-the-projects-text {
+    width: 50%;
+}
+
+.about-the-projects-text h1 {
+    font-size: 2.5rem;
 }
