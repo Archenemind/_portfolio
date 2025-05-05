@@ -13,7 +13,13 @@ body {
     background-color: antiquewhite;
 }
 
-hr,
+hr {
+    margin: 0;
+    border: none;
+    background: rgb(176, 172, 172);
+    width: 1px;
+}
+
 h2 {
     margin: 0;
 }
@@ -187,6 +193,10 @@ h2 {
 }
 
 .container .sidebar hr {
+    width: 65px;
+    border: none;
+    height: 2px;
+    background-color: rgb(176, 172, 172);
     flex: 1 1 10%;
     margin: 0 80% 0 0;
     border-width: 2px;
