@@ -216,16 +216,28 @@ h2 {
     border-radius: 50%;
 }
 
+/* 
 .two {
     margin: 0 0 min(3rem, 3vw) 0;
     display: flex;
     flex-wrap: nowrap;
-    /* flex-direction: row; */
 }
 
+*/
+/* 
 .two>* {
     flex-basis: 100%;
     padding-right: 10%;
+} */
+
+.grid {
+    /* gap: 3rem; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid img {
+    max-width: 100%;
 }
 
 .about-the-projects {
@@ -235,10 +247,11 @@ h2 {
 
 }
 
-/* .about-the-projects .wrapper-flex {
+.wrapper-flex {
     display: flex;
     flex-direction: column;
-} */
+    align-items: center;
+}
 
 .about-the-projects h2 {
     text-align: center;
@@ -248,7 +261,7 @@ h2 {
     font-size: 2.5rem;
 }
 
-.container .two img {
+.container .grid img {
     display: block;
 }
 
