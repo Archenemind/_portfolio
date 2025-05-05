@@ -48,8 +48,8 @@ h2 {
 }
 
 .navbar-ul {
+    width: 60.3%;
     position: sticky;
-    left: 60%;
 
     display: flex;
 
@@ -58,6 +58,7 @@ h2 {
     align-items: center;
 
     list-style-type: none;
+    justify-content: end;
 
 }
 
