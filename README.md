@@ -1,5 +1,7 @@
-#**Portfolio Webpage**
+#
+**Portfolio Webpage**
 
-##Developed with
-CSS
-HTML
+##
+Developed with
+- CSS
+- HTML
