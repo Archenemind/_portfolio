@@ -115,13 +115,13 @@ h2 {
 }
 
 .navbar-ul {
-    width: 60.3%;
-    max-width: 60.3%;
+    width: 36.8%;
+    max-width: 36.8%;
     position: sticky;
 
     display: flex;
 
-    margin-left: 9rem;
+    /* margin-left: 9rem; */
     min-height: 100%;
     align-items: center;
 
