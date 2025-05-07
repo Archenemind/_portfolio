@@ -389,10 +389,9 @@ footer>* {
         flex-direction: column;
     }
 
-    .navbar-p {
-        /* margin: 0 !important; */
-        /* width: 50% !important;
-        height: 50%; */
+
+    .container {
+        margin-inline: min(3rem, 3vw);
     }
 
     .navbar-p p {
@@ -403,7 +402,7 @@ footer>* {
     .navbar-ul {
         float: right;
         right: 0;
-        margin-left: min(3rem, 3vw);
+        margin: 0 min(3rem, 3vw) 0 min(3rem, 3vw);
     }
 
     .about-and-sidebar-divider {
@@ -457,6 +456,14 @@ footer>* {
 }
 
 @media screen and (max-width:510px) {
+    .navbar-p {
+        width: 50%;
+    }
+
+    .navbar-ul {
+        margin: 0;
+        margin-right: 2rem;
+    }
 
     .footer-container {
         margin: 0;
