@@ -46,7 +46,7 @@ h2 {
     top: 0;
     right: 0;
     height: 100vh;
-    width: 30%;
+    width: 35%;
     z-index: 999;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
@@ -62,7 +62,7 @@ h2 {
 .navbar-sidebar li {
     display: flex !important;
     width: 100%;
-    margin: 0 !important;
+    margin: 0;
     height: 50px;
     align-items: center;
     padding-left: 30px;
@@ -70,7 +70,7 @@ h2 {
 }
 
 .navbar-sidebar li a {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .navbar-sidebar li:hover {
@@ -435,6 +435,16 @@ footer>* {
         order: 3;
     }
 
+    .navbar-sidebar li {
+        justify-content: center;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .navbar-sidebar li a {
+        font-size: 1.9rem;
+    }
+
     .no-bar {
         visibility: visible;
         position: relative;
@@ -466,6 +476,15 @@ footer>* {
     .navbar-ul {
         margin: 0;
         margin-right: 2rem;
+    }
+
+    .navbar-sidebar li {
+        margin-inline: auto;
+        padding-left: 0;
+    }
+
+    .navbar-sidebar li a {
+        font-size: 1.3rem;
     }
 
     .footer-container {
