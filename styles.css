@@ -9,85 +9,14 @@
     }
 } */
 
-@media screen and (max-width:500px) {
-    hr {
-        visibility: hidden;
-        position: fixed;
-    }
 
-
-
-    body {
-        display: flex !important;
-        flex-direction: column;
-    }
-
-    .navbar-p {
-        margin: 0 !important;
-        /* width: 50% !important;
-        height: 50%; */
-    }
-
-    .navbar-p p {
-        font-size: 1.5rem !important;
-
-    }
-
-    .navbar-ul {
-        margin: 0 !important;
-        float: right !important;
-    }
-
-    .about {
-        order: 1 !important;
-    }
-
-    .about-the-projects {
-        order: 2 !important;
-        margin: min(4rem, 4vh) 0 0 0 !important;
-    }
-
-    .about-the-projects h1 {
-        margin-bottom: min(3rem, 3vh) !important;
-        font-size: 2.5rem !important;
-        text-align: center;
-    }
-
-    .about-the-projects h2 {
-        font-size: 2rem !important;
-    }
-
-    .sidebar {
-        order: 3 !important;
-    }
-
-    footer {
-        order: 4 !important;
-    }
-
-    footer p {
-        margin: 0 !important;
-
-    }
-
-    .footer-container {
-        margin: 0 !important;
-        white-space: wrap !important;
-    }
-
-    footer .img-container {
-        margin-left: 1rem;
-    }
-
-
-}
 
 /* @media(min-width:500px) { */
 
 
 * {
     margin: 0;
-
+    padding: 0;
     font-family: "Roboto",
         sans-serif;
     font-size: large;
@@ -110,6 +39,44 @@ hr {
 
 h2 {
     margin: 0;
+}
+
+.navbar-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.navbar-sidebar li {
+    display: flex !important;
+    width: 100%;
+    margin: 0 !important;
+    height: 50px;
+    align-items: center;
+    padding-left: 30px;
+}
+
+
+
+.navbar-sidebar li:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar-sidebar li::after {
+    background-color: white !important;
+    min-height: 0px !important;
 }
 
 .navbar {
@@ -137,9 +104,14 @@ h2 {
 }
 
 .navbar-p {
+    width: 40%;
     margin-left: min(5.5rem, 5.5vw);
     font-weight: bolder;
+}
+
+.navbar-p p {
     font-size: 2rem;
+
 }
 
 .navbar-ul {
@@ -149,7 +121,7 @@ h2 {
 
     display: flex;
 
-    margin-right: 3rem;
+    margin-left: 9rem;
     min-height: 100%;
     align-items: center;
 
@@ -185,6 +157,21 @@ h2 {
 .navbar-ul li:hover::after {
     width: 100%;
     /* expands to full width on hover */
+}
+
+.navbar-ul .no-bar::after {
+    min-height: 0;
+    content: none;
+}
+
+.navbar-ul li a svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.no-bar {
+    visibility: hidden;
+    position: fixed;
 }
 
 /* .navbar-ul li:hover {
@@ -237,10 +224,6 @@ h2 {
     flex: 1 1 32%;
     margin: min(3rem, 4.4vh) 0 0 min(3rem, 4.4vw);
 }
-
-/* .container .sidebar hr {
-    margin-bottom: min(3rem, 3vw);
-} */
 
 .container .sidebar ul {
     display: flex;
@@ -395,3 +378,88 @@ footer>* {
 }
 
 /* } */
+
+@media screen and (max-width:1000px) {
+    .hide {
+        display: none !important;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-p {
+        /* margin: 0 !important; */
+        /* width: 50% !important;
+        height: 50%; */
+    }
+
+    .navbar-p p {
+        font-size: 1.5rem;
+
+    }
+
+    .navbar-ul {
+        float: right;
+        right: 0;
+        margin-left: min(3rem, 3vw);
+    }
+
+    .about-and-sidebar-divider {
+        display: none;
+    }
+
+    .about {
+        order: 1;
+    }
+
+    .about-the-projects {
+        order: 2;
+        margin: min(4rem, 4vh) 0 0 0;
+    }
+
+    .about-the-projects h1 {
+        margin-bottom: min(3rem, 3vh);
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .about-the-projects h2 {
+        font-size: 2rem;
+    }
+
+    .sidebar {
+        order: 3;
+    }
+
+    .no-bar {
+        visibility: visible;
+        position: relative;
+    }
+
+    footer {
+        order: 4;
+    }
+
+    footer p {
+        margin: 0;
+
+    }
+
+
+
+    footer .img-container {
+        margin-left: 1rem;
+    }
+
+
+}
+
+@media screen and (max-width:510px) {
+
+    .footer-container {
+        margin: 0;
+        white-space: wrap;
+    }
+}

@@ -21,9 +21,22 @@
         <p>Carlos Garcia</p>
       </div>
       <div class="navbar-ul">
-        <ul>
+        <ul class="navbar-sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                viewBox="0 -960 960 960" width="24px" fill="#000000">
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+              </svg></a></li>
           <li><a href="#top">About</a></li>
           <li><a href="https://t.me/Archenemind">Contact me</a> </li>
+        </ul>
+        <ul>
+          <li class="hide"><a href="#top">About</a></li>
+          <li class="hide"><a href="https://t.me/Archenemind">Contact me</a> </li>
+          <li class="no-bar" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
+                viewBox="0 -960 960 960" width="30px" fill="#000000">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+              </svg></a></li>
         </ul>
       </div>
     </div>
@@ -125,21 +138,18 @@
 
   </footer>
 
-  <!-- <script>
-    let refreshInterval;
-
-    // Start refresh automatically when page loads
-    window.onload = function () {
-      refreshInterval = setInterval(function () {
-        location.reload();
-      }, 5000);
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector(".navbar-sidebar")
+      sidebar.style.display = "flex"
     }
-
-    // Function to stop refreshing
-    function stopRefresh() {
-      clearInterval(refreshInterval);
+    function hideSidebar() {
+      const sidebar = document.querySelector(".navbar-sidebar")
+      sidebar.style.display = "none"
     }
-  </script> -->
+  </script>
+
+
 
 </body>
 
