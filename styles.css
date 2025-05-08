@@ -41,46 +41,7 @@ h2 {
     margin: 0;
 }
 
-.navbar-sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 35%;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
 
-    backdrop-filter: blur(10px);
-}
-
-
-.navbar-sidebar li {
-    display: flex !important;
-    width: 100%;
-    margin: 0;
-    height: 50px;
-    align-items: center;
-    padding-left: 30px;
-    font-weight: bolder;
-}
-
-.navbar-sidebar li a {
-    font-size: 1.1rem;
-}
-
-.navbar-sidebar li:hover {
-    background-color: #f0f0f0;
-}
-
-.navbar-sidebar li::after {
-    background-color: white !important;
-    min-height: 0px !important;
-}
 
 .navbar {
     /* box-sizing: border-box; */
@@ -135,7 +96,7 @@ h2 {
 
 .navbar-ul li {
     position: relative;
-    /* This property is necessary for the ba bellow about and contact me */
+    /* This property is necessary for the bar bellow about and contact me */
 
     display: inline-block;
     margin-left: 3rem;
@@ -184,6 +145,47 @@ h2 {
 .navbar-ul li a {
     text-decoration: none;
     color: inherit;
+}
+
+.navbar-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 35%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.navbar-sidebar li {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    height: 50px;
+    align-items: center;
+    padding-left: 30px;
+    font-weight: bolder;
+}
+
+.navbar-sidebar li a {
+    font-size: 1.1rem;
+}
+
+.navbar-sidebar li:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar-sidebar li::after {
+    background-color: white;
+    min-height: 0px;
 }
 
 .spacer {
@@ -380,11 +382,55 @@ footer>* {
     align-content: center;
 }
 
+.img-container:hover {
+    position: relative;
+    top: 10px;
+    z-index: 998;
+}
+
+.img-container::before {
+    transform: scale(5);
+
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    bottom: 120px;
+    /* Position above the footer */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+    width: 30rem;
+    /* Width of the larger image */
+    height: 30rem;
+    /* Height of the larger image */
+    background-image: url('equal-dimentions/IMG_20250425_164345equal_dimentions_640.jpg');
+    /* Same image as the small one */
+    background-size: cover;
+    background-position: center;
+    /* Slightly rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    /* Add shadow for depth */
+    opacity: 0;
+    /* Hide by default */
+    visibility: hidden;
+    /* Hide by default */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Smooth transition */
+    z-index: 1002;
+    /* Ensure it's above other elements */
+}
+
+/* Show the larger image on hover */
+.img-container:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* } */
 
 @media screen and (max-width:1000px) {
-    .hide {
-        display: none !important;
+    #hide {
+        display: none;
     }
 
     body {
