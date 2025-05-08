@@ -548,15 +548,53 @@ footer>* {
     }
 
     .navbar-sidebar li a {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .navbar-container ul {
         margin-right: 3rem;
     }
 
+    .navbar-sidebar {
+        margin-right: 0 !important;
+    }
+
     .footer-container {
         margin: 0;
         white-space: wrap;
+    }
+
+    .img-container:hover {
+        top: 0;
+    }
+
+    .img-container::before {
+        transform: none;
+
+        border-radius: 50%;
+        content: none;
+        position: absolute;
+        bottom: 120px;
+        /* Position above the footer */
+        left: 50%;
+        transform: translateX(-50%);
+        /* Center horizontally */
+        width: 30rem;
+        /* Width of the larger image */
+        height: 30rem;
+        /* Height of the larger image */
+        background-image: none;
+        /* Same image as the small one */
+        background-size: cover;
+        background-position: center;
+        /* Slightly rounded corners */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        /* Add shadow for depth */
+        opacity: 0;
+        /* Hide by default */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        /* Smooth transition */
+        z-index: 1002;
+        /* Ensure it's above other elements */
     }
 }
