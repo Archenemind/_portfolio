@@ -516,7 +516,7 @@ footer>* {
 
 @media screen and (max-width:510px) {
     .navbar-p {
-        width: 55%;
+        width: 45%;
     }
 
     .navbar-ul {
@@ -531,6 +531,10 @@ footer>* {
 
     .navbar-sidebar li a {
         font-size: 1.3rem;
+    }
+
+    .navbar-container ul {
+        margin-right: 3rem;
     }
 
     .footer-container {
