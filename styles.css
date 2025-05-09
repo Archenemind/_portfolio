@@ -59,7 +59,7 @@ h2 {
     min-height: 65px;
     width: 100vw;
     max-width: 100%;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2), 1px 3px 4px rgba(0, 0, 0, 0.2);
     background-color: var(--background-color);
     /* Horizontal offset, vertical offset, blur radius, color */
 }
@@ -327,7 +327,7 @@ h2 {
 .about-the-projects {
     display: flex;
     flex-direction: column;
-    margin: 0 min(5.5rem, 5.5vw);
+    /* margin: 0 min(5.5rem, 5.5vw); */
     max-width: 100%;
     width: 100%;
 }
@@ -336,15 +336,22 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.about-the-projects h2 {
-    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .about-the-projects h1 {
     font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
+
+.about-the-projects h2 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1rem 0 1rem 0;
+}
+
+
 
 .container .grid img {
     display: block;
@@ -392,20 +399,19 @@ footer>* {
 
 .img-container:hover {
     position: relative;
-    top: 10px;
+    top: 1px;
     z-index: 998;
 }
 
 .img-container::before {
-    transform: scale(5);
-
+    display: block;
     border-radius: 50%;
     content: '';
-    position: absolute;
+    position: fixed;
     bottom: 120px;
     /* Position above the footer */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-10%);
     /* Center horizontally */
     width: 30rem;
     /* Width of the larger image */
@@ -520,6 +526,13 @@ footer>* {
     }
 
 
+    .img-container::before {
+        content: none;
+    }
+
+    .img-container:hover {
+        top: 0;
+    }
 }
 
 @media screen and (max-width:510px) {
