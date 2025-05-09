@@ -340,6 +340,10 @@ h2 {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.wrapper-flex img {
+    width: 100%;
+}
+
 .about-the-projects h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
