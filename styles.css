@@ -557,6 +557,10 @@ footer>* {
         padding: 0;
     }
 
+    .navbar-sidebar li:hover {
+        background-color: transparent;
+    }
+
     .navbar-sidebar li a {
         font-size: 1.9rem;
     }
@@ -564,6 +568,38 @@ footer>* {
     .menu-toogle {
         visibility: visible;
         position: relative;
+    }
+
+    .theme-toggle:hover svg {
+        transform: rotate(0);
+    }
+
+    @keyframes rotate-cw {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rotate-ccw {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(-360deg);
+        }
+    }
+
+    .rotate-clockwise {
+        animation: rotate-cw 0.5s ease-in-out;
+    }
+
+    .rotate-counterclockwise {
+        animation: rotate-ccw 0.5s ease-in-out;
     }
 
     footer {
