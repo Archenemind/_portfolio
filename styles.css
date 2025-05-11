@@ -1,13 +1,14 @@
 :root {
     /* Light theme (default) */
     --background-color: antiquewhite;
-    --text-color: rgb(74, 64, 64);
+    --text-color: black;
     --navbar-bg: antiquewhite;
     --footer-bg: rgb(1, 1, 1);
     --footer-text: grey;
     --hr-color: rgb(176, 172, 172);
     --shadow-color: rgba(0, 0, 0, 0.2);
-    --navbar-li: rgb(74, 64, 64);
+    --navbar-li-color: rgb(74, 64, 64);
+    --svg-color: black;
 }
 
 [data-theme="dark"] {
@@ -19,7 +20,8 @@
     --footer-text: #a0a0a0;
     --hr-color: #444444;
     --shadow-color: rgba(0, 0, 0, 0.5);
-    --navbar-li: rgb(204, 198, 198);
+    --navbar-li-color: rgb(204, 198, 198);
+    --svg-color: rgb(204, 198, 198);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -130,7 +132,7 @@ h2 {
     display: inline-block;
     margin-left: 3rem;
 
-    color: var(--navbar-li);
+    color: var(--navbar-li-color);
 }
 
 .navbar-ul li::after {
@@ -165,6 +167,10 @@ h2 {
 .menu-toogle {
     visibility: hidden;
     position: fixed;
+}
+
+.menu-toogle svg {
+    fill: var(--svg-color);
 }
 
 /* .navbar-ul li:hover {
