@@ -187,7 +187,7 @@ h2 {
 }
 
 .theme-toggle:hover svg {
-    transform: rotate(30deg);
+    transform: rotate(360deg);
 }
 
 [data-theme="dark"] .theme-icon {
@@ -304,6 +304,10 @@ h2 {
     height: 40px;
 }
 
+.container .sidebar ul li svg {
+    fill: var(--svg-color);
+}
+
 .container .sidebar ul li a {
     display: flex;
     top: auto;
@@ -342,6 +346,7 @@ h2 {
 
 .my-projects-ul img {
     border-radius: 50%;
+    background: var(--svg-color);
 }
 
 /* 
