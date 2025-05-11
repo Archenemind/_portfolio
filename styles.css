@@ -673,4 +673,8 @@ footer>* {
     .navbar-ul li {
         margin-left: 1.5rem;
     }
+
+    .navbar-sidebar li {
+        margin-left: 0;
+    }
 }
