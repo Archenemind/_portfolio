@@ -29,14 +29,34 @@
               </svg></a></li>
           <li><a href="#">About</a></li>
           <li><a href="https://t.me/Archenemind">Contact me</a> </li>
+
         </ul>
         <ul>
-          <li id="hide"><a href="#top">About</a></li>
-          <li id="hide"><a href="https://t.me/Archenemind">Contact me</a> </li>
-          <li class="no-bar" onclick=showSidebar()><a href="#" onclick="event.preventDefault();"><svg
+          <li class="menu-toogle no-bar" onclick=showSidebar()><a href="#" onclick="event.preventDefault();"><svg
                 xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#000000">
                 <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
               </svg></a></li>
+          <li id="hide"><a href="#top">About</a></li>
+          <li id="hide"><a href="https://t.me/Archenemind">Contact me</a> </li>
+          <li class="theme-toggle no-bar">
+            <a href="#" onclick="event.preventDefault(); toggleTheme();">
+              <svg width="35px" height="35px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <title>dark-mode</title>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Icons">
+                    <g>
+                      <rect width="48" height="48" fill="none" />
+                      <g>
+                        <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z" />
+                        <path
+                          d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z" />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -147,6 +167,36 @@
       const sidebar = document.querySelector(".navbar-sidebar")
       sidebar.style.display = "none"
     }
+
+    // Add this to your existing script
+    function toggleTheme() {
+      // Check if the current theme is dark
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+      // Toggle the theme
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // Check for saved theme preference or respect OS preference
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // If no saved preference, use OS preference
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    }
+
+    // Initialize theme when page loads
+    document.addEventListener('DOMContentLoaded', initTheme);
   </script>
 
 
