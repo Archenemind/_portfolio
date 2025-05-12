@@ -452,12 +452,12 @@ footer>* {
     /* Width of the larger image */
     height: 30rem;
     /* Height of the larger image */
-    background-image: url('equal-dimentions/IMG_20250425_164345equal_dimentions_640.jpg');
+    background-image: url('media/equal-dimentions/IMG_20250425_164345equal_dimentions_640.jpg');
     /* Same image as the small one */
     background-size: cover;
     background-position: center;
     /* Slightly rounded corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px var(--shadow-color);
     /* Add shadow for depth */
     opacity: 0;
     /* Hide by default */
