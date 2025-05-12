@@ -3,3 +3,4 @@
 ## **Developed with**
 - CSS
 - HTML
+- JavaScript
