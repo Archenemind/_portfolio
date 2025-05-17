@@ -291,13 +291,27 @@ h2 {
     fill: var(--svg-color);
 }
 
+.github {
+    width: 40px;
+    height: 40px;
+}
+
 .x {
     display: inline;
     margin-top: 0.2rem;
+    width: 40px;
+    height: 40px;
+}
+
+.gmail {
+    width: 40px;
+    height: 40px;
 }
 
 .linkedin {
-    fill: var(--svg-linkedin-color)
+    fill: var(--svg-linkedin-color);
+    width: 40px;
+    height: 40px;
 }
 
 .container .sidebar .linkedin:hover {
