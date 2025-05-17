@@ -5,6 +5,7 @@
     --navbar-li-color: rgb(74, 64, 64);
     --svg-color: black;
     --shadow-color: rgba(0, 0, 0, 0.2);
+    --svg-linkedin-color: #0a66c2;
 }
 
 [data-theme="dark"] {
@@ -14,6 +15,7 @@
     --navbar-li-color: rgb(204, 198, 198);
     --svg-color: rgb(204, 198, 198);
     --shadow-color: rgba(0, 255, 255, 0.7);
+    --svg-linkedin-color: rgb(204, 198, 198);
 }
 
 * {
@@ -283,9 +285,25 @@ h2 {
     height: 40px;
 }
 
-.container .sidebar ul li svg {
+.container .sidebar .github,
+.x,
+.gmail {
     fill: var(--svg-color);
 }
+
+.x {
+    display: inline;
+    margin-top: 0.2rem;
+}
+
+.linkedin {
+    fill: var(--svg-linkedin-color)
+}
+
+.container .sidebar .linkedin:hover {
+    fill: #0a66c2;
+}
+
 
 .container .sidebar ul li a {
     display: flex;
