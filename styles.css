@@ -530,7 +530,7 @@ footer>* {
         margin: 0 min(3rem, 3vw) 0 min(3rem, 3vw);
     }
 
-    .about-and-main-container__sidebar-divider {
+    .main-container__about-section-and-sidebar-divider {
         display: none;
     }
 
