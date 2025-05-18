@@ -48,6 +48,13 @@ hr {
     width: 1px;
 }
 
+h1 {
+
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
 h2 {
     margin: 0;
 }
@@ -281,7 +288,7 @@ h2 {
 }
 
 .main-container__sidebar {
-    flex: 1 1 32%;
+    flex: 1 1 20%;
     margin: min(3rem, 4.4vh) 0 0 min(3rem, 4.4vw);
 }
 
@@ -290,6 +297,7 @@ h2 {
     flex-direction: column;
     padding: 0;
     margin-bottom: min(4rem, 4vh);
+    gap: 0.5rem;
     /* align-items: center; */
 }
 
@@ -364,11 +372,12 @@ h2 {
 .main-container__sidebar-titles-underline {
     width: 65px;
     border: none;
-    height: 2px;
+    height: 3px;
     background-color: var(--shadow-color);
     flex: 1 1 10%;
     margin: 0 80% min(3rem, 3vh) 0;
     border-width: 2px;
+    border-radius: 5px;
     /* height: 2px; */
 }
 
