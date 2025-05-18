@@ -10,15 +10,15 @@ function hideSidebar() {
 // Add this to your existing script
 function toggleTheme() {
     // Get the theme toggle SVG element
-    const themeIcon = document.querySelector('.navbar__list-element-theme-toggle svg');
+    const themeIcon = document.querySelector('.navbar__theme-toggle-svg');
 
     // Toggle between two rotation classes
-    if (themeIcon.classList.contains('rotate-clockwise')) {
-        themeIcon.classList.remove('rotate-clockwise');
-        themeIcon.classList.add('rotate-counterclockwise');
+    if (themeIcon.classList.contains('navbar__theme-toggle-svg_rotate-clockwise')) {
+        themeIcon.classList.remove('navbar__theme-toggle-svg_rotate-clockwise');
+        themeIcon.classList.add('navbar__theme-toggle-svg_rotate-counterclockwise');
     } else {
-        themeIcon.classList.remove('rotate-counterclockwise');
-        themeIcon.classList.add('rotate-clockwise');
+        themeIcon.classList.remove('navbar__theme-toggle-svg_rotate-counterclockwise');
+        themeIcon.classList.add('navbar__theme-toggle-svg_rotate-clockwise');
     }
 
     // Check if the current theme is dark

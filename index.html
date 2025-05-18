@@ -22,14 +22,17 @@
       </div>
       <div class="navbar__link-lists">
         <ul class="navbar__sidebar">
-          <li class="navbar__list-element navbar__list-element-menu-toggle" onclick=hideSidebar()><a
-              class="navbar__link" href="#" onclick="event.preventDefault();"><svg
-                class="navbar__svg navbar__menu-toggle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+          <li class="navbar__list-element navbar__sidebar-list-element navbar__list-element-menu-toggle"
+            onclick=hideSidebar()><a class="navbar__link navbar__sidebar-link" href="#"
+              onclick="event.preventDefault();"><svg class="navbar__svg navbar__menu-toggle-svg"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                 <path
                   d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
               </svg></a></li>
-          <li class="navbar__list-element"><a class="navbar__link" href="#">About</a></li>
-          <li class="navbar__list-element"><a class="navbar__link" href="https://t.me/Archenemind">Contact me</a> </li>
+          <li class="navbar__list-element navbar__sidebar-list-element"><a class="navbar__link navbar__sidebar-link"
+              href="#">About</a></li>
+          <li class="navbar__list-element navbar__sidebar-list-element"><a class="navbar__link navbar__sidebar-link"
+              href="https://t.me/Archenemind">Contact me</a> </li>
 
         </ul>
         <ul>
@@ -38,8 +41,9 @@
                 class="navbar__svg navbar__menu-toggle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                 <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
               </svg></a></li>
-          <li class="navbar__list-element" id="hide"><a class="navbar__link" href="#top">About</a></li>
-          <li class="navbar__list-element" id="hide"><a class="navbar__link" href="https://t.me/Archenemind">Contact
+          <li class="navbar__list-element navbar__list-element_hide"><a class="navbar__link" href="#top">About</a></li>
+          <li class="navbar__list-element navbar__list-element_hide"><a class="navbar__link"
+              href="https://t.me/Archenemind">Contact
               me</a> </li>
           <li class="navbar__list-element navbar__list-element-theme-toggle navbar__list-element_no-underline">
             <a class="navbar__link" href="#" onclick="event.preventDefault(); toggleTheme();">
@@ -47,7 +51,6 @@
                 <g id="Layer_2" data-name="Layer 2">
                   <g id="Icons">
                     <g>
-                      <!-- <rect width="48" height="48" fill="none" /> -->
                       <g>
                         <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z" />
                         <path
@@ -85,53 +88,41 @@
     <hr class="main-container__about-section-and-sidebar-divider">
     <section class="main-container__sidebar">
       <h2>Social Media</h2>
-      <hr>
+      <hr class="main-container__sidebar-titles-underline">
       <ul class="main-container__sidebar-lists">
 
-        <li class="main-container__sidebar-list-element"><a href="https://x.com/DannyA83897945"><svg class="x"
-              viewBox="0 0 1400 1427" xmlns="http://www.w3.org/2000/svg">
+        <li class="main-container__sidebar-list-element"><a class="main-container__sidebar-link"
+            href="https://x.com/DannyA83897945"><svg class="main-container__svg-x" viewBox="0 0 1400 1427"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
             </svg>
-            <p>X</p>
+            <p class="main-container__sidebar-text">X</p>
           </a></li>
 
-        <li class="main-container__sidebar-list-element"><a href="https://github.com/Archenemind"><svg class="github"
-              viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-
-              <title>github [#142]</title>
-              <desc>Created with Sketch.</desc>
-              <defs>
-
-              </defs>
+        <li class="main-container__sidebar-list-element"><a class="main-container__sidebar-link"
+            href="https://github.com/Archenemind"><svg class="main-container__svg-github" viewBox="0 0 20 20"
+              version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Page-1" stroke="none" stroke-width="1">
                 <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)">
                   <g id="icons" transform="translate(56.000000, 160.000000)">
                     <path
                       d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
                       id="github-[#142]">
-
                     </path>
                   </g>
                 </g>
               </g>
             </svg>
-            <p>Github</p>
+            <p class="main-container__sidebar-text">Github</p>
           </a></li>
 
 
 
-        <li class="main-container__sidebar-list-element"><a
-            href="https://www.linkedin.com/in/carlos-daniel-garcia-alvarez-846819235/"><svg class="linkedin"
-              viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        <li class="main-container__sidebar-list-element"><a class="main-container__sidebar-link"
+            href="https://www.linkedin.com/in/carlos-daniel-garcia-alvarez-846819235/"><svg
+              class="main-container__svg-linkedin" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
-
-              <title>linkedin [#161]</title>
-              <desc>Created with Sketch.</desc>
-              <defs>
-
-              </defs>
               <g id="Page-1" stroke="none" stroke-width="1">
                 <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -7479.000000)">
                   <g id="icons" transform="translate(56.000000, 160.000000)">
@@ -144,55 +135,59 @@
                 </g>
               </g>
             </svg>
-            <p>LinkedIn</p>
+            <p class="main-container__sidebar-text">LinkedIn</p>
           </a></li>
 
-        <li class="main-container__sidebar-list-element"><a href="mailto:qesloqpongo@gmail.com"><svg class="gmail"
-              viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <title>gmail</title>
+        <li class="main-container__sidebar-list-element"><a class="main-container__sidebar-link"
+            href="mailto:qesloqpongo@gmail.com"><svg class="main-container__svg-gmail" viewBox="0 0 32 32" version="1.1"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M30.996 7.824v17.381c0 0 0 0 0 0.001 0 1.129-0.915 2.044-2.044 2.044-0 0-0 0-0.001 0h-4.772v-11.587l-8.179 6.136-8.179-6.136v11.588h-4.772c0 0 0 0-0 0-1.129 0-2.044-0.915-2.044-2.044 0-0 0-0.001 0-0.001v0-17.381c0-0 0-0.001 0-0.001 0-1.694 1.373-3.067 3.067-3.067 0.694 0 1.334 0.231 1.848 0.619l-0.008-0.006 10.088 7.567 10.088-7.567c0.506-0.383 1.146-0.613 1.84-0.613 1.694 0 3.067 1.373 3.067 3.067v0z">
               </path>
             </svg>
-            <p>Gmail</p>
+            <p class="main-container__sidebar-text">Gmail</p>
           </a>
         </li>
 
       </ul>
       <h2>My Projects</h2>
-      <hr>
-      <ul class="main-container__sidebar-lists my-projects-ul">
-        <li class="main-container__sidebar-list-element"><a href=""><img class="main-container__sidebar-list-image"
-              src="media/icons/my_projects/640photos_file_7.jpg" alt="Converteus bot icon">
-            <p>Converteus bot</p>
+      <hr class="main-container__sidebar-titles-underline">
+      <ul class="main-container__sidebar-lists">
+        <li class="main-container__sidebar-list-element"><a class="main-container__sidebar-link" href=""><img
+              class="main-container__sidebar-list-image" src="media/icons/my_projects/640photos_file_7.jpg"
+              alt="Converteus bot icon">
+            <p class="main-container__sidebar-text">Converteus bot</p>
           </a></li>
-        <li class="main-container__sidebar-list-element"><a href=""><img class="main-container__sidebar-list-image"
-              src="media/icons/my_projects/black.jpg" alt="Converteus web icon">
-            <p>Converteus web</p>
+        <li class="main-container__sidebar-list-element"><a class="main-container__sidebar-link" href=""><img
+              class="main-container__sidebar-list-image" src="media/icons/my_projects/black.jpg"
+              alt="Converteus web icon">
+            <p class="main-container__sidebar-text">Converteus web</p>
           </a></li>
-        <li class="main-container__sidebar-list-element"><a href=""><img class="main-container__sidebar-list-image"
-              src="media/icons/my_projects/black.jpg" alt="Converteus web icon">
-            <p>eCommerce site</p>
+        <li class="main-container__sidebar-list-element"><a class="main-container__sidebar-link" href=""><img
+              class="main-container__sidebar-list-image" src="media/icons/my_projects/black.jpg"
+              alt="Converteus web icon">
+            <p class="main-container__sidebar-text">eCommerce site</p>
           </a></li>
       </ul>
     </section>
 
-    <section class="about-the-projects">
-      <h1>About the projects</h1>
-      <div class="grid">
-        <div class="wrapper-flex">
-          <img src="media/about-the-projects/Screenshot 2025-04-30 174149.png" alt="Converteus bot image">
-          <h2>Converteus bot</h2>
+    <section class="main-container__section-about-the-projects">
+      <h1 class="main-container__section-title-about-the-projects">About the projects</h1>
+      <div class="main-container__projects-grid">
+        <div class="main-container__project-card">
+          <img class="main-container__card-image" src="media/about-the-projects/Screenshot 2025-04-30 174149.png"
+            alt="Converteus bot image">
+          <h2 class="main-container__project-title">Converteus bot</h2>
         </div>
 
-        <div class="wrapper-flex">
-          <img src="" alt="Converteus web image">
-          <h2>Converteus web</h2>
+        <div class="main-container__project-card">
+          <img class="main-container__card-image" src="" alt="Converteus web image">
+          <h2 class="main-container__project-title">Converteus web</h2>
         </div>
 
-        <div class="wrapper-flex">
-          <img src="" alt="Site image">
-          <h2>eCommerce site</h2>
+        <div class="main-container__project-card">
+          <img class="main-container__card-image" src="" alt="Site image">
+          <h2 class="main-container__project-title">eCommerce site</h2>
         </div>
       </div>
 
@@ -201,13 +196,13 @@
   </div>
   <!-- <button onclick="stopRefresh()">Stop Auto Refresh</button> -->
 
-  <footer>
-    <div class="footer-container">
-      <p>© 2025 All Rights Reserved | Developed by Carlos Garcia</p>
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__text">© 2025 All Rights Reserved | Developed by Carlos Garcia</p>
 
-      <div class="img-container">
+      <div class="footer__image-container">
 
-        <img class="converteus-image" src="media/equal-dimentions/IMG_20250425_164345equal_dimentions_640.jpg"
+        <img class="footer__image" src="media/equal-dimentions/IMG_20250425_164345equal_dimentions_640.jpg"
           alt="Photo of me">
       </div>
     </div>

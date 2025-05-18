@@ -194,7 +194,7 @@ h2 {
 }
 
 
-.navbar__sidebar li {
+.navbar__sidebar-list-element {
     display: flex;
     width: 100%;
     margin: 0;
@@ -204,15 +204,15 @@ h2 {
     font-weight: bolder;
 }
 
-.navbar__sidebar li a {
+.navbar__sidebar-link {
     font-size: 1.1rem;
 }
 
-.navbar__sidebar li:hover {
+.navbar__sidebar-list-element:hover {
     background-color: #f0f0f0;
 }
 
-.navbar__sidebar li::after {
+.navbar__sidebar-list-element::after {
     background-color: white;
     min-height: 0px;
 }
@@ -280,41 +280,37 @@ h2 {
     height: 40px;
 }
 
-.main-container .main-container__sidebar .github,
-.x,
-.gmail {
+.main-container__svg-github,
+.main-container__svg-x,
+.main-container__svg-gmail {
     fill: var(--svg-color);
 }
 
-.github {
+.main-container__svg-github,
+.main-container__svg-gmail {
     width: 40px;
     height: 40px;
 }
 
-.x {
+.main-container__svg-x {
     display: inline;
     margin-top: 0.2rem;
     width: 40px;
     height: 40px;
 }
 
-.gmail {
-    width: 40px;
-    height: 40px;
-}
-
-.linkedin {
+.main-container__svg-linkedin {
     fill: var(--svg-linkedin-color);
     width: 40px;
     height: 40px;
 }
 
-.main-container .main-container__sidebar .linkedin:hover {
+.main-container__svg-linkedin:hover {
     fill: #0a66c2;
 }
 
 
-.main-container .main-container__sidebar ul li a {
+.main-container__sidebar-link {
     display: flex;
     top: auto;
     bottom: auto;
@@ -322,7 +318,7 @@ h2 {
     color: inherit;
 }
 
-.main-container .main-container__sidebar ul li a:link {
+.main-container__sidebar-link:link {
     display: flex;
     top: auto;
     bottom: auto;
@@ -330,16 +326,16 @@ h2 {
     color: inherit;
 }
 
-.main-container .main-container__sidebar ul li a p {
+.main-container__sidebar-link:hover {
+    font-weight: bolder;
+}
+
+.main-container__sidebar-text {
     display: inline;
     margin: auto 0 auto 1rem;
 }
 
-.main-container .main-container__sidebar ul li a:hover {
-    font-weight: bolder;
-}
-
-.main-container .main-container__sidebar hr {
+.main-container__sidebar-titles-underline {
     width: 65px;
     border: none;
     height: 2px;
@@ -350,37 +346,23 @@ h2 {
     /* height: 2px; */
 }
 
-.my-projects-ul img {
+.main-container__sidebar-list-image {
     border-radius: 50%;
     background: var(--svg-color);
 }
 
-/* 
-.two {
-    margin: 0 0 min(3rem, 3vw) 0;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-*/
-/* 
-.two>* {
-    flex-basis: 100%;
-    padding-right: 10%;
-} */
-
-.grid {
+.main-container__projects-grid {
     gap: 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-bottom: min(3rem, 5vh);
 }
 
-.grid img {
+.main-container__card-image {
     max-width: 100%;
 }
 
-.about-the-projects {
+.main-container__section-about-the-projects {
     display: flex;
     flex-direction: column;
     /* margin: 0 min(5.5rem, 5.5vw); */
@@ -388,7 +370,7 @@ h2 {
     width: 100%;
 }
 
-.wrapper-flex {
+.main-container__project-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -396,18 +378,18 @@ h2 {
     box-shadow: 2px 2px 4px var(--shadow-color), 2px 2px 4px var(--shadow-color);
 }
 
-.wrapper-flex img {
+.main-container__card-image {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 100%;
 }
 
-.about-the-projects h1 {
+.main-container__section-title-about-the-projects {
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
-.about-the-projects h2 {
+.main-container__project-title {
     text-align: center;
     font-size: 1.3rem;
     margin: 1rem 0 1rem 0;
@@ -415,11 +397,11 @@ h2 {
 
 
 
-.main-container .grid img {
+.main-container__card-image {
     display: block;
 }
 
-.img-container img {
+.footer__image {
     width: 70px;
     height: 70px;
     object-fit: cover;
@@ -429,43 +411,43 @@ h2 {
     border-radius: 50%;
 }
 
-footer {
+.footer {
     box-shadow: 1px 1px 1px blanchedalmond;
     background-color: rgb(1, 1, 1);
     display: flex;
     min-height: 100px;
 }
 
-footer p {
+.footer__text {
     font-size: 0.9rem;
     align-content: center;
     justify-self: end;
     color: grey;
 }
 
-footer>* {
+.footer>* {
     max-width: 50%;
 }
 
-.footer-container {
+.footer__container {
     max-width: 100%;
     display: flex;
     margin-inline: auto;
     white-space: nowrap;
 }
 
-.img-container {
+.footer__image-container {
     margin-left: 2rem;
     align-content: center;
 }
 
-.img-container:hover {
+.footer__image-container:hover {
     position: relative;
     top: 1px;
     z-index: 998;
 }
 
-.img-container::before {
+.footer__image-container::before {
     display: block;
     border-radius: 50%;
     content: '';
@@ -497,7 +479,7 @@ footer>* {
 }
 
 /* Show the larger image on hover */
-.img-container:hover::before {
+.footer__image-container:hover::before {
     opacity: 1;
     visibility: visible;
 }
@@ -505,10 +487,6 @@ footer>* {
 /* } */
 
 @media screen and (max-width:1000px) {
-    #hide {
-        display: none;
-    }
-
     body {
         display: flex;
         flex-direction: column;
@@ -519,37 +497,41 @@ footer>* {
         margin-inline: min(3rem, 3vw);
     }
 
-    .navbar-p p {
+    .navbar__owner-name {
         font-size: 1.5rem;
 
     }
 
-    .navbar__link-lists {
+    .navbar__list-element {
         float: right;
         right: 0;
         margin: 0 min(3rem, 3vw) 0 min(3rem, 3vw);
+    }
+
+    .navbar__list-element_hide {
+        display: none;
     }
 
     .main-container__about-section-and-sidebar-divider {
         display: none;
     }
 
-    .about {
+    .main-container__about-section {
         order: 1;
     }
 
-    .about-the-projects {
+    .main-container__section-about-the-projects {
         order: 2;
         margin: min(4rem, 4vh) 0 0 0;
     }
 
-    .about-the-projects h1 {
+    .main-container__section-title-about-the-projects {
         margin-bottom: min(3rem, 3vh);
         font-size: 2.5rem;
         text-align: center;
     }
 
-    .about-the-projects h2 {
+    .main-container__project-title {
         font-size: 2rem;
     }
 
@@ -557,17 +539,17 @@ footer>* {
         order: 3;
     }
 
-    .navbar__sidebar li {
+    .navbar__list-element {
         justify-content: center;
         margin-left: 0;
         padding: 0;
     }
 
-    .navbar__sidebar li:hover {
+    .navbar__list-element:hover {
         background-color: transparent;
     }
 
-    .navbar__sidebar li a {
+    .navbar__sidebar-link {
         font-size: 1.9rem;
     }
 
@@ -600,35 +582,35 @@ footer>* {
         }
     }
 
-    .rotate-clockwise {
+    .navbar__theme-toggle-svg_rotate-clockwise {
         animation: rotate-cw 0.5s ease-in-out;
     }
 
-    .rotate-counterclockwise {
+    .navbar__theme-toggle-svg_rotate-counterclockwise {
         animation: rotate-ccw 0.5s ease-in-out;
     }
 
-    footer {
+    .footer {
         order: 4;
     }
 
-    footer p {
+    .footer__text {
         margin: 0;
 
     }
 
 
 
-    footer .img-container {
+    .footer__image-container {
         margin-left: 1rem;
     }
 
 
-    .img-container::before {
+    .footer__image-container::before {
         content: none;
     }
 
-    .img-container:hover {
+    .footer__image-container:hover {
         top: 0;
     }
 }
@@ -650,12 +632,12 @@ footer>* {
         width: 30%;
     }
 
-    .navbar__sidebar li {
+    .navbar__sidebar-list-element {
         margin-inline: auto;
         padding-left: 0;
     }
 
-    .navbar__sidebar li a {
+    .navbar__sidebar-link {
         font-size: 1.2rem;
     }
 
@@ -663,16 +645,16 @@ footer>* {
         margin-right: 0 !important;
     }
 
-    .footer-container {
+    .footer__container {
         margin: 0;
         white-space: wrap;
     }
 
-    .img-container:hover {
+    .footer__image-container:hover {
         top: 0;
     }
 
-    .img-container::before {
+    .footer__image-container::before {
         transform: none;
 
         border-radius: 50%;
@@ -704,11 +686,11 @@ footer>* {
 }
 
 @media screen and (max-width:460px) {
-    .navbar__link-lists li {
+    .navbar__list-element {
         margin-left: 1.5rem;
     }
 
-    .navbar__sidebar li {
+    .navbar__sidebar-list-element {
         margin-left: 0;
     }
 }
