@@ -90,7 +90,7 @@ h2 {
 
 }
 
-.navbar-ul {
+.navbar__link-lists {
     width: 45%;
     max-width: 100%;
     position: sticky;
@@ -106,7 +106,7 @@ h2 {
 
 }
 
-.navbar-ul li {
+.navbar__list-element {
     position: relative;
     /* This property is necessary for the bar bellow about and contact me */
 
@@ -116,7 +116,7 @@ h2 {
     color: var(--navbar-li-color);
 }
 
-.navbar-ul li::after {
+.navbar__list-element::after {
     content: '';
     position: absolute;
     width: 0;
@@ -130,53 +130,48 @@ h2 {
     transition: width 0.3s ease;
 }
 
-.navbar-ul li:hover::after {
+.navbar__list-element:hover::after {
     width: 100%;
     /* expands to full width on hover */
 }
 
-.navbar-ul .no-bar::after {
+.navbar__list-element_no-underline::after {
     min-height: 0;
     content: none;
 }
 
-.navbar-ul li a svg {
+.navbar__svg {
     display: inline-block;
     vertical-align: middle;
 }
 
-.menu-toogle {
+.navbar__list-element-menu-toggle {
     visibility: hidden;
     position: fixed;
 }
 
-.menu-toogle svg {
+.navbar__menu-toggle-svg {
     fill: var(--svg-color);
+    width: 35px;
+    height: 35px;
 }
 
-/* .navbar-ul li:hover {
-    border-bottom: 2px solid;
-} */
-
-.theme-toggle {
+.navbar__list-element-theme-toggle {
     cursor: pointer;
 }
 
-.theme-toggle svg {
+.navbar__theme-toggle-svg {
+    width: 35px;
+    height: 35px;
     fill: var(--text-color);
     transition: transform 0.5s ease;
 }
 
-.theme-toggle:hover svg {
+.navbar__theme-toggle-svg:hover {
     transform: rotate(360deg);
 }
 
-[data-theme="dark"] .theme-icon {
-    /* Moon icon for dark mode */
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23e0e0e0'%3E%3Cpath d='M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26 c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-.navbar-ul li a {
+.navbar__link {
     text-decoration: none;
     color: inherit;
 }
@@ -222,11 +217,11 @@ h2 {
     min-height: 0px;
 }
 
-.spacer {
+.navbar-spacer {
     min-height: 65px;
 }
 
-.container {
+.main-container {
     display: flex;
     flex-wrap: wrap;
     margin: 0 min(5.5rem, 5.5vw);
@@ -236,7 +231,7 @@ h2 {
     /* padding: 0 3em; */
 }
 
-.container .about {
+.main-container__about-section {
     display: flex;
     flex-direction: column;
     /* width: 60%; */
@@ -245,26 +240,26 @@ h2 {
     margin: 0 min(3rem, 3vw) 0 0;
 }
 
-.container .about p {
-    font-size: 1.2rem;
-    margin: 0;
-}
-
-.container .about h1 {
+.main-container__about-section-title {
     margin: min(3rem, 3vw) 0 min(0.25rem, 0.25vw) 0;
     font-size: 5rem;
 }
 
-.about-and-sidebar-divider {
+.main-container__about-section-paragraphs {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.main-container__about-section-and-sidebar-divider {
     margin: min(4.5rem, 4.5vh) 0 0 0;
 }
 
-.container .sidebar {
+.main-container__sidebar {
     flex: 1 1 32%;
     margin: min(3rem, 4.4vh) 0 0 min(3rem, 4.4vw);
 }
 
-.container .sidebar ul {
+.main-container__sidebar-lists {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -272,7 +267,7 @@ h2 {
     /* align-items: center; */
 }
 
-.container .sidebar ul li {
+.main-container__sidebar-list-element {
     display: flex;
     list-style-type: none;
     margin-top: min(0.1rem, 0.1vh);
@@ -280,12 +275,12 @@ h2 {
     bottom: auto;
 }
 
-.container .sidebar ul li img {
+.main-container__sidebar-list-image {
     width: 40px;
     height: 40px;
 }
 
-.container .sidebar .github,
+.main-container .main-container__sidebar .github,
 .x,
 .gmail {
     fill: var(--svg-color);
@@ -314,12 +309,12 @@ h2 {
     height: 40px;
 }
 
-.container .sidebar .linkedin:hover {
+.main-container .main-container__sidebar .linkedin:hover {
     fill: #0a66c2;
 }
 
 
-.container .sidebar ul li a {
+.main-container .main-container__sidebar ul li a {
     display: flex;
     top: auto;
     bottom: auto;
@@ -327,7 +322,7 @@ h2 {
     color: inherit;
 }
 
-.container .sidebar ul li a:link {
+.main-container .main-container__sidebar ul li a:link {
     display: flex;
     top: auto;
     bottom: auto;
@@ -335,16 +330,16 @@ h2 {
     color: inherit;
 }
 
-.container .sidebar ul li a p {
+.main-container .main-container__sidebar ul li a p {
     display: inline;
     margin: auto 0 auto 1rem;
 }
 
-.container .sidebar ul li a:hover {
+.main-container .main-container__sidebar ul li a:hover {
     font-weight: bolder;
 }
 
-.container .sidebar hr {
+.main-container .main-container__sidebar hr {
     width: 65px;
     border: none;
     height: 2px;
@@ -420,7 +415,7 @@ h2 {
 
 
 
-.container .grid img {
+.main-container .grid img {
     display: block;
 }
 
@@ -520,7 +515,7 @@ footer>* {
     }
 
 
-    .container {
+    .main-container {
         margin-inline: min(3rem, 3vw);
     }
 
@@ -529,13 +524,13 @@ footer>* {
 
     }
 
-    .navbar-ul {
+    .navbar__link-lists {
         float: right;
         right: 0;
         margin: 0 min(3rem, 3vw) 0 min(3rem, 3vw);
     }
 
-    .about-and-sidebar-divider {
+    .about-and-main-container__sidebar-divider {
         display: none;
     }
 
@@ -558,7 +553,7 @@ footer>* {
         font-size: 2rem;
     }
 
-    .sidebar {
+    .main-container__sidebar {
         order: 3;
     }
 
@@ -576,12 +571,12 @@ footer>* {
         font-size: 1.9rem;
     }
 
-    .menu-toogle {
+    .navbar__list-element-menu-toggle {
         visibility: visible;
         position: relative;
     }
 
-    .theme-toggle:hover svg {
+    .navbar__list-element-theme-toggle:hover svg {
         transform: rotate(0);
     }
 
@@ -646,14 +641,10 @@ footer>* {
 
 
 
-    .navbar-ul {
+    .navbar__link-lists {
         width: 45%;
         /* margin: 0; */
     }
-
-    /* .navbar-ul ul {
-        margin: 0;
-    } */
 
     .navbar__sidebar {
         width: 30%;
@@ -713,7 +704,7 @@ footer>* {
 }
 
 @media screen and (max-width:460px) {
-    .navbar-ul li {
+    .navbar__link-lists li {
         margin-left: 1.5rem;
     }
 

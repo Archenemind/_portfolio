@@ -10,7 +10,7 @@ function hideSidebar() {
 // Add this to your existing script
 function toggleTheme() {
     // Get the theme toggle SVG element
-    const themeIcon = document.querySelector('.theme-toggle svg');
+    const themeIcon = document.querySelector('.navbar__list-element-theme-toggle svg');
 
     // Toggle between two rotation classes
     if (themeIcon.classList.contains('rotate-clockwise')) {

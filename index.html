@@ -20,32 +20,34 @@
       <div class="navbar__owner-name-container">
         <p class="navbar__owner-name">Carlos Garcia</p>
       </div>
-      <div class="navbar-ul">
+      <div class="navbar__link-lists">
         <ul class="navbar__sidebar">
-          <li class="menu-toogle" onclick=hideSidebar()><a href="#" onclick="event.preventDefault();"><svg
-                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+          <li class="navbar__list-element navbar__list-element-menu-toggle" onclick=hideSidebar()><a
+              class="navbar__link" href="#" onclick="event.preventDefault();"><svg
+                class="navbar__svg navbar__menu-toggle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                 <path
                   d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
               </svg></a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="https://t.me/Archenemind">Contact me</a> </li>
+          <li class="navbar__list-element"><a class="navbar__link" href="#">About</a></li>
+          <li class="navbar__list-element"><a class="navbar__link" href="https://t.me/Archenemind">Contact me</a> </li>
 
         </ul>
         <ul>
-          <li class="menu-toogle no-bar" onclick=showSidebar()><a href="#" onclick="event.preventDefault();"><svg
-                xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#000000">
+          <li class="navbar__list-element navbar__list-element-menu-toggle navbar__list-element_no-underline"
+            onclick=showSidebar()><a class="navbar__link" href="#" onclick="event.preventDefault();"><svg
+                class="navbar__svg navbar__menu-toggle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                 <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
               </svg></a></li>
-          <li id="hide"><a href="#top">About</a></li>
-          <li id="hide"><a href="https://t.me/Archenemind">Contact me</a> </li>
-          <li class="theme-toggle no-bar">
-            <a href="#" onclick="event.preventDefault(); toggleTheme();">
-              <svg width="35px" height="35px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <title>dark-mode</title>
+          <li class="navbar__list-element" id="hide"><a class="navbar__link" href="#top">About</a></li>
+          <li class="navbar__list-element" id="hide"><a class="navbar__link" href="https://t.me/Archenemind">Contact
+              me</a> </li>
+          <li class="navbar__list-element navbar__list-element-theme-toggle navbar__list-element_no-underline">
+            <a class="navbar__link" href="#" onclick="event.preventDefault(); toggleTheme();">
+              <svg class="navbar__svg navbar__theme-toggle-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <g id="Layer_2" data-name="Layer 2">
                   <g id="Icons">
                     <g>
-                      <rect width="48" height="48" fill="none" />
+                      <!-- <rect width="48" height="48" fill="none" /> -->
                       <g>
                         <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z" />
                         <path
@@ -61,14 +63,15 @@
       </div>
     </div>
   </nav>
-  <div class="spacer"></div>
+  <div class="navbar-spacer"></div>
   <!-- <hr class="navbar-main-hr"> -->
   <!-- <button onclick="stopRefresh()">Stop Auto Refresh</button> -->
 
-  <div class="container">
-    <section class="about">
-      <h1>About</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae beatae magni placeat, deserunt quibusdam nihil
+  <div class="main-container">
+    <section class="main-container__about-section">
+      <h1 class="main-container__about-section-title">About</h1>
+      <p class="main-container__about-section-paragraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+        beatae magni placeat, deserunt quibusdam nihil
         facere aut illo dicta laudantium fugiat, delectus modi quidem, quia asperiores eaque ipsa Lorem ipsum dolor
         sit amet consectetur adipisicing elit. Ex esse sed ad laudantium, laborum quo eum aliquam natus sapiente, est
         quaerat ullam, minima assumenda cumque? Nam nostrum deserunt et quisquam?Lorem ipsum dolor sit amet
@@ -79,22 +82,23 @@
         dolor sit amet consectetur, adipisicing elit. Doloremque culpa labore reiciendis quidem voluptatibus ut omnis
         ducimus quos aliquid. Saepe tenetur accusantium vel voluptas iusto non cupiditate quia exercitationem optio.
     </section>
-    <hr class="about-and-sidebar-divider">
-    <section class="sidebar">
+    <hr class="main-container__about-section-and-sidebar-divider">
+    <section class="main-container__sidebar">
       <h2>Social Media</h2>
       <hr>
-      <ul>
+      <ul class="main-container__sidebar-lists">
 
-        <li><a href="https://x.com/DannyA83897945"><svg class="x" viewBox="0 0 1400 1427"
-              xmlns="http://www.w3.org/2000/svg">
+        <li class="main-container__sidebar-list-element"><a href="https://x.com/DannyA83897945"><svg class="x"
+              viewBox="0 0 1400 1427" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
             </svg>
             <p>X</p>
           </a></li>
 
-        <li><a href="https://github.com/Archenemind"><svg class="github" viewBox="0 0 20 20" version="1.1"
-              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <li class="main-container__sidebar-list-element"><a href="https://github.com/Archenemind"><svg class="github"
+              viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
 
               <title>github [#142]</title>
               <desc>Created with Sketch.</desc>
@@ -118,7 +122,8 @@
 
 
 
-        <li><a href="https://www.linkedin.com/in/carlos-daniel-garcia-alvarez-846819235/"><svg class="linkedin"
+        <li class="main-container__sidebar-list-element"><a
+            href="https://www.linkedin.com/in/carlos-daniel-garcia-alvarez-846819235/"><svg class="linkedin"
               viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -142,8 +147,8 @@
             <p>LinkedIn</p>
           </a></li>
 
-        <li><a href="mailto:qesloqpongo@gmail.com"><svg class="gmail" viewBox="0 0 32 32" version="1.1"
-              xmlns="http://www.w3.org/2000/svg">
+        <li class="main-container__sidebar-list-element"><a href="mailto:qesloqpongo@gmail.com"><svg class="gmail"
+              viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <title>gmail</title>
               <path
                 d="M30.996 7.824v17.381c0 0 0 0 0 0.001 0 1.129-0.915 2.044-2.044 2.044-0 0-0 0-0.001 0h-4.772v-11.587l-8.179 6.136-8.179-6.136v11.588h-4.772c0 0 0 0-0 0-1.129 0-2.044-0.915-2.044-2.044 0-0 0-0.001 0-0.001v0-17.381c0-0 0-0.001 0-0.001 0-1.694 1.373-3.067 3.067-3.067 0.694 0 1.334 0.231 1.848 0.619l-0.008-0.006 10.088 7.567 10.088-7.567c0.506-0.383 1.146-0.613 1.84-0.613 1.694 0 3.067 1.373 3.067 3.067v0z">
@@ -156,14 +161,17 @@
       </ul>
       <h2>My Projects</h2>
       <hr>
-      <ul class="my-projects-ul">
-        <li><a href=""><img src="media/icons/my_projects/640photos_file_7.jpg" alt="Converteus bot icon">
+      <ul class="main-container__sidebar-lists my-projects-ul">
+        <li class="main-container__sidebar-list-element"><a href=""><img class="main-container__sidebar-list-image"
+              src="media/icons/my_projects/640photos_file_7.jpg" alt="Converteus bot icon">
             <p>Converteus bot</p>
           </a></li>
-        <li><a href=""><img src="media/icons/my_projects/black.jpg" alt="Converteus web icon">
+        <li class="main-container__sidebar-list-element"><a href=""><img class="main-container__sidebar-list-image"
+              src="media/icons/my_projects/black.jpg" alt="Converteus web icon">
             <p>Converteus web</p>
           </a></li>
-        <li><a href=""><img src="media/icons/my_projects/black.jpg" alt="Converteus web icon">
+        <li class="main-container__sidebar-list-element"><a href=""><img class="main-container__sidebar-list-image"
+              src="media/icons/my_projects/black.jpg" alt="Converteus web icon">
             <p>eCommerce site</p>
           </a></li>
       </ul>
