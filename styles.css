@@ -281,6 +281,7 @@ h2 {
 .main-container__about-section-paragraphs {
     font-size: 1.2rem;
     margin: 0;
+    line-height: 2rem;
 }
 
 .main-container__about-section-and-sidebar-divider {
