@@ -155,13 +155,15 @@ h2 {
 .navbar__list-element::after {
     content: '';
     position: absolute;
+    border-radius: 2rem;
     width: 0;
     /* starts with 0 width */
-    min-height: 2px;
+    min-height: 0.15rem;
     /* same as your previous border width */
     left: 0;
     bottom: 0;
-    background-color: rgb(176, 172, 172);
+    background-color: var(--shadow-color);
+    /* background-color: rgb(176, 172, 172); */
 
     transition: width 0.3s ease;
 }
@@ -374,14 +376,14 @@ h2 {
 }
 
 .main-container__sidebar-titles-underline {
-    width: 65px;
+    width: 3.5rem;
     border: none;
-    height: 3px;
+    height: 0.2rem;
     background-color: var(--shadow-color);
     flex: 1 1 10%;
     margin: 0 80% min(3rem, 3vh) 0;
-    border-width: 2px;
-    border-radius: 5px;
+    border-width: 0.125rem;
+    border-radius: 0.3125rem;
     /* height: 2px; */
 }
 
