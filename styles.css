@@ -5,7 +5,7 @@
     --navbar-li-color: rgb(74, 64, 64);
     --svg-color: black;
     --shadow-color: rgba(0, 0, 0, 0.2);
-    --svg-linkedin-color: #0a66c2;
+    /* --svg-linkedin-color: #0a66c2; */
 }
 
 [data-theme="dark"] {
@@ -15,7 +15,7 @@
     --navbar-li-color: rgb(204, 198, 198);
     --svg-color: rgb(204, 198, 198);
     --shadow-color: rgba(0, 255, 255, 0.7);
-    --svg-linkedin-color: rgb(204, 198, 198);
+    /* --svg-linkedin-color: rgb(204, 198, 198); */
 }
 
 * {
@@ -322,12 +322,9 @@ h2 {
 
 .main-container__svg-github,
 .main-container__svg-x,
-.main-container__svg-gmail {
+.main-container__svg-gmail,
+.main-container__svg-linkedin {
     fill: var(--svg-color);
-}
-
-.main-container__svg-github,
-.main-container__svg-gmail {
     width: 40px;
     height: 40px;
 }
@@ -335,20 +332,7 @@ h2 {
 .main-container__svg-x {
     display: inline;
     margin-top: 0.2rem;
-    width: 40px;
-    height: 40px;
 }
-
-.main-container__svg-linkedin {
-    fill: var(--svg-linkedin-color);
-    width: 40px;
-    height: 40px;
-}
-
-.main-container__svg-linkedin:hover {
-    fill: #0a66c2;
-}
-
 
 .main-container__sidebar-link {
     display: flex;
