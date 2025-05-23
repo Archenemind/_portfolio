@@ -131,7 +131,7 @@ h2 {
     position: absolute;
     z-index: 1;
     bottom: -3.13rem;
-    left: -100%;
+    left: -60%;
     margin-left: -3.75rem;
     opacity: 0;
     transition: opacity 0.3s;
@@ -140,6 +140,18 @@ h2 {
 .navbar__link_tooltip:hover .navbar__theme-tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+
+.navbar__link_tooltip .navbar__theme-tooltip::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
 }
 
 .navbar__list-element {
@@ -529,6 +541,7 @@ h2 {
         visibility: hidden;
         opacity: 0;
     }
+
 
 
     .navbar__list-element {
