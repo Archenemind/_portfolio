@@ -299,6 +299,7 @@ h2 {
     font-size: 1.2rem;
     margin: 0;
     line-height: 2rem;
+    text-align: justify;
 }
 
 .main-container__about-section-and-sidebar-divider {
