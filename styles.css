@@ -525,6 +525,12 @@ h2 {
 
     }
 
+    .navbar__link_tooltip:hover .navbar__theme-tooltip {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+
     .navbar__list-element {
         float: right;
         right: 0;
@@ -714,6 +720,16 @@ h2 {
     }
 
     .navbar__sidebar-list-element {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:395px) {
+    .navbar__owner-name-container {
+        width: 75%;
+    }
+
+    .navbar__list-element {
         margin-left: 0;
     }
 }
