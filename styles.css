@@ -66,8 +66,8 @@ h2 {
     position: fixed;
     z-index: 1000;
     /* z-index: 1000; */
-    height: 65px;
-    min-height: 65px;
+    height: 4rem;
+    min-height: 4rem;
     width: 100vw;
     max-width: 100%;
     box-shadow: 1px 3px 4px var(--shadow-color);
@@ -122,7 +122,7 @@ h2 {
 
 .navbar__theme-tooltip {
     visibility: hidden;
-    width: 200px;
+    width: 12.5rem;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -130,9 +130,9 @@ h2 {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: -50px;
+    bottom: -3.13rem;
     left: -100%;
-    margin-left: -60px;
+    margin-left: -3.75rem;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -190,8 +190,8 @@ h2 {
 
 .navbar__menu-toggle-svg {
     fill: var(--svg-color);
-    width: 35px;
-    height: 35px;
+    width: 2.19rem;
+    height: 2.19rem;
 }
 
 .navbar__list-element-theme-toggle {
@@ -199,8 +199,8 @@ h2 {
 }
 
 .navbar__theme-toggle-svg {
-    width: 35px;
-    height: 35px;
+    width: 2.19rem;
+    height: 2.19rem;
     fill: var(--text-color);
     transition: transform 0.5s ease;
 }
@@ -256,7 +256,7 @@ h2 {
 }
 
 .navbar-spacer {
-    min-height: 65px;
+    min-height: 4.1rem;
 }
 
 .main-container {
@@ -274,7 +274,7 @@ h2 {
     flex-direction: column;
     /* width: 60%; */
     flex: 1 1 58%;
-    min-height: 700px;
+    min-height: 43.75rem;
     margin: 0 min(3rem, 3vw) 0 0;
 }
 
@@ -316,8 +316,8 @@ h2 {
 }
 
 .main-container__sidebar-list-image {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .main-container__svg-github,
@@ -325,8 +325,8 @@ h2 {
 .main-container__svg-gmail,
 .main-container__svg-linkedin {
     fill: var(--svg-color);
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .main-container__svg-x {
@@ -368,7 +368,6 @@ h2 {
     margin: 0 80% min(3rem, 3vh) 0;
     border-width: 0.125rem;
     border-radius: 0.3125rem;
-    /* height: 2px; */
 }
 
 .main-container__sidebar-list-image {
@@ -379,7 +378,7 @@ h2 {
 .main-container__projects-grid {
     gap: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
     margin-bottom: min(3rem, 5vh);
 }
 
@@ -390,7 +389,6 @@ h2 {
 .main-container__section-about-the-projects {
     display: flex;
     flex-direction: column;
-    /* margin: 0 min(5.5rem, 5.5vw); */
     max-width: 100%;
     width: 100%;
 }
@@ -399,13 +397,13 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 0.63rem;
     box-shadow: 2px 2px 4px var(--shadow-color), 2px 2px 4px var(--shadow-color);
 }
 
 .main-container__card-image {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
     width: 100%;
 }
 
@@ -427,8 +425,8 @@ h2 {
 }
 
 .footer__image {
-    width: 70px;
-    height: 70px;
+    width: 4.38rem;
+    height: 4.38rem;
     object-fit: cover;
     display: block;
     /* position: relative; */
@@ -440,7 +438,7 @@ h2 {
     box-shadow: 1px 1px 1px blanchedalmond;
     background-color: rgb(1, 1, 1);
     display: flex;
-    min-height: 100px;
+    min-height: 6.25rem;
 }
 
 .footer__text {
@@ -477,7 +475,7 @@ h2 {
     border-radius: 50%;
     content: '';
     position: fixed;
-    bottom: 120px;
+    bottom: 7.5rem;
     /* Position above the footer */
     left: 50%;
     transform: translateX(-10%);
@@ -491,7 +489,7 @@ h2 {
     background-size: cover;
     background-position: center;
     /* Slightly rounded corners */
-    box-shadow: 0 0 15px var(--shadow-color);
+    box-shadow: 0 0 0.9rem var(--shadow-color);
     /* Add shadow for depth */
     opacity: 0;
     /* Hide by default */
@@ -685,7 +683,7 @@ h2 {
         border-radius: 50%;
         content: none;
         position: absolute;
-        bottom: 120px;
+        bottom: 7.5rem;
         /* Position above the footer */
         left: 50%;
         transform: translateX(-50%);
@@ -699,7 +697,7 @@ h2 {
         background-size: cover;
         background-position: center;
         /* Slightly rounded corners */
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 0.9rem rgba(0, 0, 0, 0.5);
         /* Add shadow for depth */
         opacity: 0;
         /* Hide by default */
