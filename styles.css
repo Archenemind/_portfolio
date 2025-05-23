@@ -286,7 +286,7 @@ h2 {
     flex-direction: column;
     /* width: 60%; */
     flex: 1 1 58%;
-    min-height: 43.75rem;
+    min-height: 35.75rem;
     margin: 0 min(3rem, 3vw) 0 var(--general-margin);
 }
 
@@ -303,7 +303,7 @@ h2 {
 }
 
 .main-container__about-section-and-sidebar-divider {
-    margin: min(4.5rem, 4.5vh) 0 0 0;
+    margin: min(4.5rem, 4.5vh) 0 min(30rem, 30vh) 0;
 }
 
 .main-container__sidebar {
