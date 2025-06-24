@@ -1,29 +1,35 @@
 :root {
     /* Light theme (default) */
-    --background-color: antiquewhite;
-    --text-color: black;
+    --background-color: #F1F5FE;
+    --text-color: #101B37;
     --navbar-li-color: rgb(74, 64, 64);
     --svg-color: black;
     --shadow-color: rgba(0, 0, 0, 0.2);
     --general-margin: min(5.5rem, 5.5vw);
     --tooltip-background-color: #555;
     --tooltip-text-color: #fff;
+    --navbar-background-color: #F1F5FE;
     --navbar-sidebar-color: rgba(255, 255, 255, 0.2);
     --navbar-sidebar-shadow: rgba(0, 0, 0, 0.1);
     --navbar-sidebar-hover-color: #f0f0f0;
     --navbar-sidebar-list-element-after: white;
-    --footer-background-color: rgb(1, 1, 1);
-    --footer-text-color: grey;
+    --footer-background-color: #1e293b;
+    --footer-text-color: #F1F5FE;
     /* --svg-linkedin-color: #0a66c2; */
+    --about-the-projects-background-color: #C2CCE5;
 }
 
 [data-theme="dark"] {
     /* Dark theme */
-    --background-color: #252424;
-    --text-color: #e0e0e0;
+    --background-color: #132349;
+    --text-color: #F1F5FE;
+    --navbar-background-color: #1a2f61;
     --navbar-li-color: rgb(204, 198, 198);
+    --about-the-projects-background-color: #0f1a34;
+
     --svg-color: rgb(204, 198, 198);
-    --shadow-color: rgba(0, 255, 255, 0.7);
+    --shadow-color: #E51376;
+    --footer-background-color: #060b16;
     /* --svg-linkedin-color: rgb(204, 198, 198); */
 }
 
@@ -80,7 +86,7 @@ h2 {
     width: 100vw;
     max-width: 100%;
     box-shadow: 1px 3px 4px var(--shadow-color);
-    background-color: var(--background-color);
+    background-color: var(--navbar-background-color);
     /* Horizontal offset, vertical offset, blur radius, color */
 }
 
@@ -420,6 +426,7 @@ h2 {
     flex-direction: column;
     max-width: 100%;
     width: 100%;
+    background-color: var(--about-the-projects-background-color);
 }
 
 .main-container__project-card {
